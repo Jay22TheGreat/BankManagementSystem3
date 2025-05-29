@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane fx:id="rootPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: blue;" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.bankmanagementsystem3.PaymentController">
+    <children>
+        <VBox alignment="CENTER" layoutX="153.0" layoutY="40.0" prefHeight="320.0" prefWidth="297.0" spacing="20.0" style="-fx-background-color: grey;">
+            <children>
+                <Label fx:id="titleLabel" text="Make a Payment" />
+                <TextField fx:id="recipientAccountField" promptText="Recipient Account Number">
+               <effect>
+                  <DropShadow />
+               </effect></TextField>
+                <TextField fx:id="amountField" promptText="Amount">
+               <effect>
+                  <DropShadow />
+               </effect></TextField>
+                <TextField fx:id="descriptionField" promptText="Description (Optional)">
+               <effect>
+                  <DropShadow />
+               </effect></TextField>
+                <Button fx:id="makePaymentButton" onAction="#makePayment" prefHeight="54.0" prefWidth="140.0" style="-fx-background-color: #06fa32;" text="Submit Payment">
+               <effect>
+                  <DropShadow />
+               </effect>
+               <font>
+                  <Font name="Arial Black" size="12.0" />
+               </font></Button>
+                <Button fx:id="backButton" onAction="#backToBankView" style="-fx-background-color: red;" text="Back">
+               <font>
+                  <Font name="Arial Black" size="12.0" />
+               </font>
+               <effect>
+                  <DropShadow />
+               </effect></Button>
+                <Label fx:id="statusLabel" text="" />
+                <ProgressIndicator fx:id="progressIndicator" progress="0.0" visible="false" />
+            </children>
+         <effect>
+            <DropShadow height="80.66" radius="33.1025" spread="0.08" width="53.75">
+               <color>
+                  <Color red="1.0" green="1.0" blue="1.0" />
+               </color>
+            </DropShadow>
+         </effect>
+        </VBox>
+    </children>
+</AnchorPane>

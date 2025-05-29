@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox alignment="CENTER" prefHeight="679.0" prefWidth="608.0" spacing="20" style="-fx-background-color: #006aff;" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="model.TransactionHistoryController">
+    <padding>
+        <Insets bottom="25" left="25" right="25" top="25" />
+    </padding>
+
+    <!-- Header -->
+    <Label style="-fx-font-size: 24; -fx-font-weight: bold; -fx-text-fill: #1a252f; -fx-padding: 10 0 20 0;" text="Transaction History" />
+   <BorderPane prefHeight="488.0" prefWidth="602.0" style="-fx-background-color: white;">
+      <top>
+          <Label fx:id="accountLabel" prefHeight="25.0" prefWidth="60.0" style="-fx-font-size: 14; -fx-text-fill: #3c4b5c; -fx-padding: 0 0 10 0;" text="Account: " BorderPane.alignment="CENTER" />
+      </top>
+      <center>
+      
+          <!-- Transaction Display -->
+          <Label fx:id="transactionListLabel" prefHeight="508.0" prefWidth="398.0" style="-fx-font-size: 13; -fx-text-fill: #2c3e50; -fx-background-color: #f9fbfd; -fx-padding: 15; -fx-border-color: #cccccc; -fx-border-width: 1; -fx-border-radius: 5;" wrapText="true" BorderPane.alignment="CENTER" />
+      </center>
+   </BorderPane>
+
+    <!-- Buttons -->
+    <Button fx:id="backButton" onAction="#backToBankView" style="-fx-background-color: #ecf0f1; -fx-text-fill: #2c3e50; -fx-font-size: 14; -fx-padding: 8 20; -fx-background-radius: 5;" text="Back" />
+</VBox>
